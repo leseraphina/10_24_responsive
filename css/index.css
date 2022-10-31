@@ -32,6 +32,7 @@ header{
   width:100%;
   padding:18px 0;
   background-color:rgba(56, 30, 59, 0.726);
+  z-index:1000;
 }
 header>div{
   width:1160px;
@@ -182,3 +183,165 @@ header>.btn{
 #box02>section.skill>ul>li:nth-child(3)>span{background-size:80% 100%;}
 #box02>section.skill>ul>li:nth-child(4)>span{background-size:80% 100%;}
 #box02>section.skill>ul>li:nth-child(5)>span{background-size:80% 100%;}
+
+/* box03 */
+#box03{
+  padding-bottom:0;
+}
+#box03>ul{
+  display:flex;
+  justify-content: center;
+  margin-bottom:70px;}
+#box03>ul>li{
+  padding:0 20px;
+  border-left:1px solid #666;
+}
+#box03>ul>li:first-child{
+  border-left:none;
+}
+#box03>ul>li>a{
+  font-size:18px;
+  color:#666;
+}
+
+#gallery{
+  position:relative;
+}
+#show{}
+#all{
+  width:1130px;
+  display:flex;
+  flex-wrap:wrap;
+  margin: 0 auto;
+}
+#all>figure{
+  width:33.3333333%;
+  margin-bottom:73px;
+  background-color:green;
+  text-align:center;
+}
+#all>figure>img{
+  width:250px;
+  margin: 0 auto 29px;
+  border-radius:50%;
+}
+#gallery>p{
+  position:absolute;
+  top:50%;
+  width:35px;
+  height:35px;
+  background-color:red;
+  display:none;
+}
+#gallery>p.prev{
+  left:50px;
+}
+#gallery>p.next{
+  right:50px;
+}
+
+
+#modal{
+  position:fixed;
+  left:0; top:0;
+  width:100%;
+  height:100%;
+  z-index:1500;
+  background-color:rgba(0,0,0,0.7);
+  display:none;
+}
+/*  */
+#box04{
+  background-color:#f93c64;
+}
+#box04>h3{
+  color:#fff;
+}
+#box04>div{
+  width:1160px;
+  margin: 0 auto;
+}
+#box04>div>form{
+  width:1066px;
+}
+#box04 form ul{}
+#box04 form ul>li{
+  margin-bottom:35px;
+  position:relative;
+  padding-left:145px;
+}
+#box04 form ul>li>label{
+  position:absolute;
+  width:145px;
+  display:block;
+  line-height:50px;
+  left:0; top:0;
+  padding-left:50px;
+  box-sizing:border-box;
+  background:url('../images/contact_icon_01.png') no-repeat 10px center;
+  font-size:20px;
+  color:#fff;
+}
+#box04 form ul>li:nth-child(2)>label{background-image:url('../images/contact_icon_02.png');}
+#box04 form ul>li:nth-child(3)>label{background-image:url('../images/contact_icon_03.png');}
+#box04 form ul>li:nth-child(4)>label{background-image:url('../images/contact_icon_04.png');}
+
+#box04 form ul>li>input{
+  line-height:50px;
+  border:none;
+  box-sizing:border-box;
+  width:100%;
+  background-color:#fff;
+}
+#box04 form ul>li>textarea{
+  height:168px;
+  line-height:50px;
+  border:none;
+  box-sizing:border-box;
+  width:100%;
+  background-color:#fff;
+}
+#box04 form p{text-align:right;}
+#box04 form p>input{
+  width:125px;
+  line-height:45px;
+  font-size:20px;
+  background-color:#f69d20;
+  border:none;
+  color:#fff;
+  border-radius:10px;
+
+}
+aside>.submenu{
+  position:fixed;
+  right:15px;
+  top:50%;
+  z-index:1000;
+}
+aside>.submenu>li{
+  margin-bottom:20px;
+}
+aside>.submenu>li>a{
+  display:block;
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  background-color:red;
+  text-indent: -99999px;
+}
+aside>.top{
+  position:fixed;
+  right:15px;
+  bottom:25px;
+  width: 45px;
+  height:45px;
+  text-indent:-99999px;
+  background-color:red;
+}
+footer{
+  padding:45px 0;
+  font-size:#fff;
+  color:#fff;
+  text-align:center;
+  background-color:#333;
+}
