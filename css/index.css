@@ -35,7 +35,7 @@ header{
   z-index:1000;
 }
 header>div{
-  width:1160px;
+  width:98%/* 1160px */;
   margin: 0 auto;
   display:flex;
   justify-content: space-between;
@@ -87,8 +87,8 @@ header>.btn{
 #box01>ul{
   position:absolute;
   bottom:16.578483245149915%; left:50%;
-  margin-left:-565px;
-  width:1130px;
+  margin-left:-50%/* -565px */;
+  width:97.41379310344828%/* 1130px */;
   background-color:green;
   display:flex;
   flex-wrap:wrap;
@@ -123,15 +123,15 @@ header>.btn{
   background-color:#e8e8e8;
 }
 #box02>section{
-  width:1160px;
+  width:98%/* 1160px */;
   margin: 0 auto;
   background-color:green;
   display:flex;
   justify-content: space-between;
   flex-wrap:wrap;
 }
-#box02>section>h4{width:312px;}
-#box02>section>ul{width:736px;}
+#box02>section>h4{width:26.89655172413793%/* 312px */;}
+#box02>section>ul{width:63.44827586206897%/* 736px */;}
 #box02>section.info{
   margin-bottom:68px;
 }
@@ -149,6 +149,7 @@ header>.btn{
   display:flex;}
 #box02>section.info>ul>li>dfn{
   display:inline-block;
+  /*  */
   width:145px;
 
 }
@@ -209,7 +210,7 @@ header>.btn{
 }
 #show{}
 #all{
-  width:1130px;
+  width:97.41379310344828%/* 1130px */;
   display:flex;
   flex-wrap:wrap;
   margin: 0 auto;
@@ -258,11 +259,11 @@ header>.btn{
   color:#fff;
 }
 #box04>div{
-  width:1160px;
+  width:98%/* 1160px */;
   margin: 0 auto;
 }
 #box04>div>form{
-  width:1066px;
+  width:91.89655172413793%/* 1066px */;
 }
 #box04 form ul{}
 #box04 form ul>li{
