@@ -40,7 +40,6 @@ header>div{
   display:flex;
   justify-content: space-between;
   align-items: center;
-  background-color:green;
 }
 header>div>h1{}
 header>div>h1>a{
@@ -59,6 +58,13 @@ header>div>nav>ul>li>a{
   color:#fff;
   font-size:18px;
   font-weight: bold;
+}
+header nav p.close{
+  width:5vh; height:5vh;
+  position:absolute;
+  right:2.5vh; top:2.5vh;
+  background-color:red;
+  display:none;
 }
 header>.btn{
   position:absolute;
@@ -89,7 +95,7 @@ header>.btn{
   bottom:16.578483245149915%; left:50%;
   margin-left:-50%/* -565px */;
   width:97.41379310344828%/* 1130px */;
-  background-color:green;
+
   display:flex;
   flex-wrap:wrap;
   color:#fff;
@@ -125,7 +131,6 @@ header>.btn{
 #box02>section{
   width:98%/* 1160px */;
   margin: 0 auto;
-  background-color:green;
   display:flex;
   justify-content: space-between;
   flex-wrap:wrap;
@@ -159,7 +164,7 @@ header>.btn{
 #box02>section.skill{}
 #box02>section.skill>h4{}
 #box02>section.skill>ul{
-  background-color:orange;
+  /* background-color:orange; */
 }
 #box02>section.skill>ul>li{
   padding-left:145px;
