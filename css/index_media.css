@@ -159,6 +159,56 @@
   aside>.top{
    display:none;
   }
+  /* modal */
+  #modal{
+    padding:8vh 4vw 4vh;
+    box-sizing:border-box;
+    /* display:none; */
+  }
+  #modal>.close{
+
+    right:4vw; top:2vh;
+    width:8vw; height:4h;
+    background-color:red;
+  }
+  #modal>section{
+    position:static;
+    width:92vw;
+    height:88vh;
+    /* width:100%;
+    height:100%; */
+    margin: 0;
+    background-color:#fff;
+    padding:4vh 4vw;
+  }
+  #modal>section>h5{
+    font-size:6vh;
+    margin-bottom:2vh;
+    line-height:6vh;
+    text-align:center;
+    color:#666;
+    background-color:red;
+  }
+  #modal>section>div{
+    display:block;
+    /* background-color:pink; */
+  }
+  #modal>section>div>figure{
+    /* width:84vw */
+    width:100%;
+    height:36vh;
+    margin-bottom:2vh;
+    overflow:hidden;
+  }
+  #modal>section>div>figure>img{
+    width:100%;
+  }
+  #modal>section>div>dl{
+    width:100%;
+    /* background-color:#666; */
+    font-size:20px;
+    line-height:27px; 
+  }
 }
 
 @media screen and (max-width:579px) and (min-width:5px){
@@ -235,23 +285,181 @@
     text-align:center;
   
   }
-  #box02>section>ul{
+#box02>section>ul{
     width:auto;}
     #box02>section.info{
       margin-bottom:25px;
     }
-    #box02>section.info>h4{
+#box02>section.info>h4{
   margin-bottom:33px;
     }
-    #box02>section.info>ul>li{
+#box02>section.info>ul>li{
       flex-wrap:wrap;}
-    #box02>section.info>ul>li>dfn{
+#box02>section.info>ul>li>dfn{
         display:block;
         /*  */
         width:20vw;
       }
-      #box02>section.info>ul>li>span{
+#box02>section.info>ul>li>span{
         width:70vw;
         display:block;
       }
+#box02>section.skill>h4{display:none;}
+/* box03 */
+#box03{
+  padding-bottom:40px;
+} 
+#box03>ul{
+  display:block;
+  width:90vw;
+  margin: 0 auto;
+}
+#box03>ul>li{
+  padding:0 0;
+  border-left:none;
+  margin-bottom:20px;
+}
+
+#box03>ul>li>a{
+  display:block;
+  border:1px solid #666;
+  line-height:35px;
+  text-align:center;
+  /* font-size:18px;
+  color:#666; */
+}
+/*  4 */
+#gallery{
+background-color:pink;
+  position:relative;
+}
+/* 17 */
+#show{
+  width:68vw;
+  margin: 0 auto;
+  overflow:hidden;
+}
+/* 17*6*4 */
+#all{
+  width:408vw;
+  /* display:flex;
+  flex-wrap:wrap;
+  margin: 0 auto; */
+}
+#all>figure{
+  width:68vw;
+  margin-bottom:0;
+  /* background-color:green;
+  text-align:center; */
+}
+#all>figure>img{
+  width:100%;
+  margin: 0;
+  margin-bottom:20px;
+  border-radius:0;
+}
+#gallery>p{
+  position:absolute;
+  top:50%;
+  width:6vw;
+  height:6vw;
+  display:block;
+}
+#gallery>p.prev{
+  left:6vw;
+}
+#gallery>p.next{
+  right:6vw;
+}
+#box04>div{
+  width:76vw;
+}
+#box04>div>form{
+  width:100%;
+}
+#box04 form ul{}
+#box04 form ul>li{
+  /* margin-bottom:35px;
+  position:relative; */
+  padding-left:0;
+}
+#box04 form ul>li>label{
+  position:absolute;
+  width:auto;
+  display:block;
+  line-height:50px;
+  left:20px; top:0;
+  color:red;
+  padding-left:0;
+  /* box-sizing:border-box; */
+  background:none;
+}
+#box04 form ul>li:nth-child(2)>label{background-image:none;}
+#box04 form ul>li:nth-child(3)>label{background-image:none;}
+#box04 form ul>li:nth-child(4)>label{background-image:none;}
+
+#box04 form ul>li>input{
+  text-indent:20px
+}
+#box04 form ul>li>textarea{
+  text-indent:20px;
+}
+#box04 form p{text-align:left;}
+#box04 form p>input{
+  width:100%;
+  border-radius:0;
+}
+#modal{
+  padding:8vh 4vw 4vh;
+  box-sizing:border-box;
+  /* display:none; */
+}
+#modal>.close{
+
+  right:4vw; top:2vh;
+  width:8vw; height:4h;
+  background-color:red;
+}
+#modal>section{
+  position:static;
+  width:92vw;
+  height:88vh;
+  /* width:100%;
+  height:100%; */
+  margin: 0;
+  background-color:#fff;
+  padding:4vh 4vw;
+}
+#modal>section>h5{
+  font-size:6vh;
+  margin-bottom:2vh;
+  line-height:6vh;
+  text-align:center;
+  color:#666;
+  background-color:red;
+}
+#modal>section>div{
+  display:block;
+  /* background-color:pink; */
+}
+#modal>section>div>figure{
+  /* width:84vw */
+  width:100%;
+  height:36vh;
+  margin-bottom:2vh;
+  overflow:hidden;
+}
+#modal>section>div>figure>img{
+  width:100%;
+}
+#modal>section>div>dl{
+  width:100%;
+  /* background-color:#666; */
+  font-size:20px;
+  line-height:27px; 
+}
+
+      /*  */
+aside>.submenu{display:none;}
+aside>.top{display:none;}
 }
