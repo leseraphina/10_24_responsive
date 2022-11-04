@@ -4,19 +4,21 @@ $(function(){
 //  각각 미디어 작업 
 let windowW = $(window).width();
 if(windowW > 1160 ){
-nav()
+nav();
+asideTop()
 }
 else if(windowW < 1159 && windowW > 980){
-nav()
+nav();
+asideTop()
 }
 else if(windowW < 979 && windowW > 580){
   gallery();
-  // tnav()
+  tnav()
 }
 else if(windowW < 579){
   gallery();
   formData();
-  // tnav();
+  tnav();
 }
 //  포트폴리오: reset
 $(window).on('resize',function(e){
@@ -72,36 +74,103 @@ function nav(){
   })
 }
 
-// tnav,mobild
+// tnav,mobile
+function tnav(){
+let navW = $('nav').width();
+console.log(navW)
+$('header .btn').on('click',function(e){
+  $(this).hide();
+  $('nav').animate({left:0},500)
+})
 
+$('nav li>a').on('click',function(e){
+ let aHref = $(this).attr('href');
+ let aPos = $(aHref).offset().top;
+ let headerH = $('header').innerHeight();
+ $('html,body').animate({scrollTop:aPos -headerH},500);
+ $('nav').css('left','-'+navW+'px');
+ $('header .btn').show();
+
+  return false;
+})
+
+$('nav .close').on('click',function(e){
+  $('nav').css('left','-'+navW+'px');
+  $('header .btn').show();
+})
+
+}
 // aside
+function asideTop(){
+  $('aside li>a').on('click',function(e){
+    const navA = $(this).attr('href');
+    const aPos = $(navA).offset().top;
+    const headerHeight = $('header').innerHeight();
+    $('html,body').animate({scrollTop:aPos-headerHeight},800)
 
+    return false;
+  })
+}
 // top
-
-
-
-//  modal
-const H5 = document.querySelector('#modal h5')
-const Img = document.querySelector('#modal figure>img')
+const H5 = document.querySelector('#modal h5');
+const Img = document.querySelector('#modal figure>img');
 const Figcaption = document.querySelector('#modal figure>figcaption')
-const Year = document.querySelector('#modal dl>.year')
+const Year = document.querySelector('#modal .year')
 const Program = document.querySelector('#modal .program')
 const Url = document.querySelector('#modal .url')
 const Text = document.querySelector('#modal .text')
-// 생성자 함수
-fuction Modal(){
-  this.속성 = 매개변수
-}
-// prototype
-Modal.Prototype.action = function(){}
 
-// 인스턴스
+// 1. 생성자 함수
+function Modal(title,pic,year,program,url,text){
+this.title = title;
+this.pic = pic;
+this.year = year;
+this.program = program;
+this.url = url;
+this.text = text;
+}
+// 2. prototype
+Modal.prototype.action = function(){
+  H5.innderHTML = this.title;
+  Img.setAttribute('src',this.pic);
+  Figcaption.innerHTML = this.title;
+  Year.innerHTML = this.year;
+  Program.innerHTML = this.program;
+  Url.innerHTML = this.url;
+  Text.innerHTML = this.text;
+}
+// 3. 인스턴스
 let modal = [
-  new Modal('work01','이미지 주소','2022','프로그램 이름','url','text')
+  new Modal('title01','./images/pic01.png','2001','프로그램1','http://aaa1.com','text01'),
+  new Modal('title02','./images/pic02.png','2002','프로그램1','http://aaa2.com','text02'),
+  new Modal('title03','./images/pic03.png','2003','프로그램1','http://aaa3.com','text03'),
+  new Modal('title04','./images/pic04.png','2004','프로그램1','http://aaa4.com','text04'),
+  new Modal('title05','./images/pic01.png','2005','프로그램1','http://aaa5.com','text05'),
+  new Modal('title06','./images/pic02.png','2006','프로그램1','http://aaa6.com','text06')
 ]
-//  이벤트: figure-> click, #modal>.close
+// 4. 이벤트
+// figure .close
 const btn = document.querySelectorAll('#box03 #all>figure')
-const close = document.querySelector('#modal>p.close')
-btn.forEach()
-close.addEventListener()
-//  이벤트 함수
+const close = document.querySelector('#modal p.close')
+// console.log(btn)
+// console.log(close)
+btn.forEach(function(item){
+  item.addEventListener('click',play)
+})
+
+close.addEventListener('click',stop)
+
+function play(){
+// #modal -> display 변경
+// figure name
+
+document.querySelector('#modal').style.display = 'block'
+let num = this.getAttribute('name');
+console.log(num)
+modal[num-1].action();
+}
+function stop(){
+  document.querySelector('#modal').style.display = 'none'
+// #modal -> display 정리
+}
+
